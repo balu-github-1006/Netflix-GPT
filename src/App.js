@@ -1,7 +1,8 @@
 import "./App.css";
+import Body from "./components/Body";
 
 function App() {
-  return <div className="App text-center p-2 m-2 text-xl">Namaste React</div>;
+  return <Body />;
 }
 
 export default App;

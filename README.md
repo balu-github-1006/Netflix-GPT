@@ -70,6 +70,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ...
+
+- Create React App
+- Configured TailwindCSS
+- Header
+  - Routing of App
+- Login Form ( Use https://formik.org/ )
+- Sign up Form ( Use https://formik.org/ )
+- Form Validation
+- useRef Hook
+- Firebase Setup ( https://console.firebase.google.com/ )
+- Deploying our App ro production
+- Create Sign up User Account ( https://firebase.google.com/docs/auth/web/password-auth )
+- Implement sign user API
+- Created Redux Store with User Slice
+- Implemented SignOut
+- Fetch from TMDB MoviesList. ( https://developer.themoviedb.org/reference/intro/getting-started )
+
 #Features of the project
 
 <!-- If User Not Logged In -->

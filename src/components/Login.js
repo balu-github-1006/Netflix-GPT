@@ -6,7 +6,6 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -14,7 +13,6 @@ const Login = () => {
 
   const email = useRef(null);
   const password = useRef(null);
-  const navigate = useNavigate();
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
@@ -59,7 +57,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          navigate("/browse");
           console.log(user);
           // ...
         })
@@ -72,16 +69,13 @@ const Login = () => {
   };
 
   return (
-    <div className="relative w-full h-full">
+    <div className="login relative ">
+      <Header />
       <img
         src="https://assets.nflxext.com/ffe/siteui/vlv3/638e9299-0637-42d1-ba39-54ade4cf2bf6/web/IN-en-20250203-TRIFECTA-perspective_46eb8857-face-4ea6-b901-dbf22b461369_large.jpg"
         alt="banner background image"
       />
-      <div className="absolute left-0 right-0 top-0 bottom-0 bg-black opacity-50 from-black">
-        &nbsp;
-      </div>
-      <Header />
-      <div className="w-[450px] m-auto px-16 py-12 bg-black absolute left-1/3 top-28 rounded-lg bg-opacity-60">
+      <div className="w-[450px] m-auto px-16 py-12 bg-black absolute left-1/3 top-28 rounded-lg bg-opacity-65">
         <h2 className="text-3xl text-white font-bold pb-6">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h2>

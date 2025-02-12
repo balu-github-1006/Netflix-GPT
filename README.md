@@ -86,6 +86,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Created Redux Store with User Slice
 - Implemented SignOut
 - Fetch from TMDB MoviesList. ( https://developer.themoviedb.org/reference/intro/getting-started )
+- Unsubscribed to the onAuthStateChanged callback when component unmounted
+- custom Hook for now playing movies
+- Update store with movies data
+- Planning for Main Container & secondary container
+- Fetch data for trailer video
+- update store with trailer video data
+- Custom Hook for movie trailer
+- Embedded Video with mute and auto play.
 
 #Features of the project
 

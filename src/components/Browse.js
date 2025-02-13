@@ -2,13 +2,13 @@ import Header from "./Header";
 import useNowPlayingMovies from "../customHooks/useNowPalyingMovies";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
-import { useSelector } from "react-redux";
+import usePopularMovies from "../customHooks/usePopularMovies";
 
 const Browse = () => {
   useNowPlayingMovies();
-
+  usePopularMovies();
   return (
-    <div className="browse">
+    <div className="browse overflow-x-hidden">
       <Header />
       <MainContainer />
       <SecondaryContainer />

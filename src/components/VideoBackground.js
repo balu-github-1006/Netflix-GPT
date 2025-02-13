@@ -1,21 +1,21 @@
 import { useSelector } from "react-redux";
 import useMovieTrailer from "../customHooks/useMovieTrailer";
 
-function VideoBackground({ id }) {
+function VideoBackground({ movieId }) {
   //Below's custom hook will fetch data and set data to the store (fetching, dispatch an action).
-  useMovieTrailer(id);
+  useMovieTrailer(movieId);
 
   //and here below we get data from store - means subscribing using useSelector.
-  const trailerVideoId = useSelector((store) => store.movies?.trailer);
+  const trailerVideoId = useSelector((store) => store.movies?.trailerVideo);
 
   return (
     <div>
       <iframe
-        className="w-screen aspect-video"
+        className="w-svw aspect-video"
         src={
           "https://www.youtube.com/embed/" +
-          trailerVideoId +
-          "&autoplay=1&mute=1"
+          trailerVideoId?.key +
+          "?&autoplay=1&mute=1"
         }
       ></iframe>
     </div>

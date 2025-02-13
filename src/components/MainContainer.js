@@ -10,21 +10,14 @@ const MainContainer = () => {
 
   if (movies === null || undefined) return;
 
-  const mainMovie = movies[0];
+  const mainMovie = movies[13];
 
-  const { title, plot, language, genre, awards, country, id } = mainMovie;
+  const { title, overview, id } = mainMovie;
 
   return (
     <div className="relative ">
-      <VideoTilte
-        title={title}
-        plot={plot}
-        language={language}
-        genre={genre}
-        awards={awards}
-        country={country}
-      />
-      <VideoBackground id={id} />
+      <VideoTilte title={title} overview={overview} />
+      <VideoBackground movieId={id} />
     </div>
   );
 };
